@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 
+require('dotenv').config()
 const cdk = require('@aws-cdk/core');
-const { CdkBlogStack } = require('../lib/cdk-blog-stack');
+const { CdkBlog_BackendStack } = require('../lib/backend');
 
 const app = new cdk.App();
-new CdkBlogStack(app, 'CdkBlogStack', {
+new CdkBlog_BackendStack(app, 'CdkBlogMainStack', {
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
    * but a single synthesized template can be deployed anywhere. */
@@ -18,4 +19,5 @@ new CdkBlogStack(app, 'CdkBlogStack', {
   // env: { account: '123456789012', region: 'us-east-1' },
 
   /* For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html */
+  env: { account: process.env.CDK_DEFAULT_ACCOUNT, region: process.env.CDK_DEFAULT_REGION },
 });

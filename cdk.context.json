@@ -1,0 +1,10 @@
+{
+  "hosted-zone:account=455180012233:domainName=iharshit.site:region=us-east-1": {
+    "Id": "/hostedzone/Z06302543JRF96W6HKLWK",
+    "Name": "iharshit.site."
+  },
+  "hosted-zone:account=455180012233:domainName=iharshit.site:region=ap-south-1": {
+    "Id": "/hostedzone/Z06302543JRF96W6HKLWK",
+    "Name": "iharshit.site."
+  }
+}
