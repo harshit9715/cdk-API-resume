@@ -1,12 +1,22 @@
-# Welcome to your CDK JavaScript project!
+# API Resume with AWS CDK
 
-This is a blank project for JavaScript development with CDK.
+Clean code to deploy API resume on AWS and link it to a custom domain.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app. The build step is not required when using JavaScript.
+## Motivation
 
-## Useful commands
+I created my API resume manually at AWS and I want to automate the entire process.
 
- * `npm run test`         perform the jest unit tests
- * `cdk deploy`           deploy this stack to your default AWS account/region
- * `cdk diff`             compare deployed stack with current state
- * `cdk synth`            emits the synthesized CloudFormation template
+## AWS Resources used
+
+- Route 53 Hosted Zone and Alias Records
+- ACM for SSL certificate
+- API Gateway for APIs
+- Lambdas for compute
+- s3 for storgae
+
+## Prerequisite (All are optional but you need to alter code a little if you dont have these)
+
+- A Domain name
+- An SSL certificate created on AWS ACM.
+- A mongoDB cluster (I have 3 lambda APIs that talks to mongodb (You can comment it out in backend index.js and deploy only mocks and s3 APIs))
+- s3 bucket APIs.
