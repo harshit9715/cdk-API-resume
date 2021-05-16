@@ -2,6 +2,10 @@
 
 Clean code to deploy API resume on AWS and link it to a custom domain.
 
+## Tl;Dr
+
+Checkout my [blog](https://iharshit.site/) or go directly to [API resume](https://iharshit.site/docs/),
+
 ## Motivation
 
 I created my API resume manually at AWS and I want to automate the entire process.
