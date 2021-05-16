@@ -5,7 +5,9 @@ const cdk = require('@aws-cdk/core');
 const { CdkBlog_BackendStack } = require('../lib/backend');
 
 const app = new cdk.App();
-new CdkBlog_BackendStack(app, 'CdkBlogMainStack', {
+new CdkBlog_BackendStack(app, 'BlogBackend', {
+  stackName: 'BlogBackend',
+  tags: {'App': 'CdkBlog'},
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
    * but a single synthesized template can be deployed anywhere. */
